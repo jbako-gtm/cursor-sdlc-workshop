@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { TEAMS } from './data/teams.js'
+import WhyThisPercent from './components/WhyThisPercent.jsx'
 import './App.css'
 
 export default function App() {
@@ -34,6 +35,9 @@ export default function App() {
           {selectedTeam.name}'s chance of winning the World Cup
         </span>
       </div>
+
+      {/* Feature 3: "Why this %" breakdown — shows factors behind the win % */}
+      <WhyThisPercent team={selectedTeam} />
     </div>
   )
 }
